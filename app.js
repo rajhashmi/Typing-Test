@@ -16,7 +16,7 @@ text_in_array.forEach((element,index)=>{
     let word = document.createElement("div");
     word.id = index;
     addLetter(word, element)
-    word.style.marginLeft = "8px"
+    word.classList = "words"
     paragraph.appendChild(word);
     
 })
