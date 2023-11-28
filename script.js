@@ -128,8 +128,17 @@ function startTimer() {
   }
 }
 window.onload = function() {
-  KeyboardEventListener.trigger('keyboardTrigger');
+  var dummyInput = document.createElement("input");
+  dummyInput.setAttribute("type", "text");
+  dummyInput.style.position = "absolute";
+  dummyInput.style.opacity = "0";
+  document.body.appendChild(dummyInput);
+
+  document.body.onclick = function() {
+      dummyInput.focus();
+  };
 };
+
 function keydownHandler(e) {
   const keyPress = e.key;
   if (keyPress === first_letter || word_Counter > 0) {
