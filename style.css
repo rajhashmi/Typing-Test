@@ -83,6 +83,29 @@ letter{
  
 
 }
+.defaultLetter{
+    transition: 0.3s ease;
+   display:inline-table;
+    width: 0;
+    letter-spacing: 0.5px;
+ 
+
+}
+.rightLetter{
+    transition: 0.3s ease;
+    display:inline-table;
+    width: 0;
+    letter-spacing: 0.5px;
+    color: white;
+ 
+}
+.wrongLetter{
+    transition: 0.3s ease;
+    display:inline-table;
+     width: 0;
+     letter-spacing: 0.5px;
+     color: #ca4754;
+}
 .pipe {
     color: #e2b714;
     position: absolute;
