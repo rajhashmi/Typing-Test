@@ -3,6 +3,7 @@ let text =
 
 
 const paragraph = document.getElementById("paragraph");
+const keyBoard = document.getElementById('keyboardTrigger').focus();
 const pipe = document.getElementById("pipe");
 const first_letter = text.at(0);
 let word_Counter = 0;
