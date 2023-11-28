@@ -108,7 +108,6 @@ function startTyping(keyPress) {
       const previous_Element = words_in_array[i][j]
       document.getElementById(i + previous_Element + j).classList.remove("rightLetter","wrongLetter")
       getElementLocation(i,previous_Element,j, "Backspace")
-      // document.getElementById(i+previous_Element+j).style.color = "rgba(255, 255, 255,0.3)";
     }else if(keyPress == letter_compare1){
       getElementLocation(i,letter_compare1,j)
       document.getElementById(i + letter_compare1 + j).classList = "rightLetter";
