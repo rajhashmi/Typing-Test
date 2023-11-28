@@ -129,6 +129,7 @@ function startTimer() {
 }
 window.onload = function() {
   document.getElementById('keyboardTrigger').focus();
+  document.getElementById('keyboardTrigger').style.display = "none"
 };
 function keydownHandler(e) {
   const keyPress = e.key;
