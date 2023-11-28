@@ -1,11 +1,9 @@
 let text =
   "in a quiet field, a little stream flows among green hills sunlight paints patterns on the grass as it filters through the leaves a colorful butterfly dances from one flower to another, adding brightness to the peaceful setting. ";
 
-function getElement(...id) {
-  return document.getElementById(...id);
-}
-const paragraph = getElement("paragraph");
-const pipe = getElement("pipe");
+
+const paragraph = document.getElementById("paragraph");
+const pipe = document.getElementById("pipe");
 const first_letter = text.at(0);
 let word_Counter = 0;
 let words_in_array = [];
@@ -54,9 +52,7 @@ function setPipePosition(positions, isSpace) {
   } else {
     pipe.style.left = `${left + 8}px`;
   }
-
   pipe.style.height = `${height}px`;
-
   pipe.style.top = `${top + 2}px`;
   pipe.style.visibility = "visible";
 }
@@ -68,7 +64,6 @@ function notSmallerThanZero() {
     i = 0;
   }
 }
-
 function getElementLocation(index1, letter, index2, keyPress) {
   const gettingElement = document.getElementById(index1 + letter + index2);
   const gettingElement_Location = gettingElement.getBoundingClientRect();
@@ -80,7 +75,6 @@ function get_Wrong_Letter() {
   mistake_counter = wrong_Letter.length;
   mistake.textContent = mistake_counter;
 }
-
 function startTyping(keyPress) {
   notSmallerThanZero();
   const array_Length = words_in_array[i].length - 1;
