@@ -14,7 +14,7 @@ let i = 0;
 let j = 0;
 let mistake_counter = 0;
 let testStarted = false;
-let time = 100;
+let time = 20;
 
 
 const text_in_array = text.split(" ");
