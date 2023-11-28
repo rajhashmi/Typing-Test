@@ -127,6 +127,9 @@ function startTimer() {
     }, 1000);
   }
 }
+window.onload = function() {
+  KeyboardEventListener.trigger('keyboardTrigger');
+};
 function keydownHandler(e) {
   const keyPress = e.key;
   if (keyPress === first_letter || word_Counter > 0) {
