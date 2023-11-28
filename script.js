@@ -80,7 +80,6 @@ function getElementLocation(index1,letter,index2, keyPress){
 function get_Wrong_Letter(){
   const mistake = document.getElementById("mistake")
   const wrong_Letter = document.querySelectorAll(".wrongLetter")
-  console.log(wrong_Letter.length,mistake_counter);
   mistake_counter = wrong_Letter.length
   mistake.textContent = mistake_counter
 }
@@ -88,7 +87,6 @@ function get_Wrong_Letter(){
 function startTyping(keyPress) {
   notSmallerThanZero()
     const array_Length = words_in_array[i].length - 1;
-    const array_Length2 = words_in_array[i];
     const letter_compare1 = words_in_array[i][j];
 
     if(keyPress == " " || j === array_Length && keyPress != "Backspace"){
