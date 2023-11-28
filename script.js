@@ -134,7 +134,7 @@ window.onload = function() {
   dummyInput.style.opacity = "0";
   document.body.appendChild(dummyInput);
 
-  document.paragraph.onclick = function() {
+  document.body.onclick = function() {
       dummyInput.focus();
   };
 };
@@ -149,6 +149,5 @@ function keydownHandler(e) {
     word_Counter++;
     startTyping(keyPress);
   }
-  alert(keyPress)
 }
 window.addEventListener("keydown", keydownHandler);
