@@ -128,7 +128,7 @@ function startTimer() {
   }
 }
 window.onload = function() {
-  KeyboardEventListener.trigger('keyboardTrigger');
+  document.getElementById('keyboardTrigger').focus();
 };
 function keydownHandler(e) {
   const keyPress = e.key;
