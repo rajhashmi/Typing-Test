@@ -11,6 +11,7 @@ let j = 0;
 let mistake_counter = 0;
 let testStarted = false;
 let time = 20;
+let keyboardIsActive = false;
 
 const text_in_array = text.split(" ");
 function addLetter(wordContainer, letters, index) {
@@ -138,6 +139,25 @@ function keydownHandler(e) {
 }
 window.addEventListener("keydown", keydownHandler);
 
-document.addEventListener("touchstart", ()=>{
-  alert("hi")
+document.addEventListener("touchstart", async () => {
+  await toggleVisualKeyboard(true);
 });
+
+document.addEventListener("click", async () => {
+  await toggleVisualKeyboard(false);
+});
+
+async function toggleVisualKeyboard(show = true) {
+  try {
+    if (show) {
+      // Show the visual keyboard and set it to overlay content:
+      await navigator.virtualKeyboard.show();
+      navigator.virtualKeyboard.overlaysContent = true;
+    } else {
+      // Hide the visual keyboard:
+      await navigator.virtualKeyboard.hide();
+    }
+  } catch (error) {
+    console.error("Error toggling virtual keyboard:", error);
+  }
+}
