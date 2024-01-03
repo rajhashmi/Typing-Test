@@ -1,9 +1,7 @@
 let text =
   "in a quiet field, a little stream flows among green hills sunlight paints patterns on the grass as it filters through the leaves a colorful butterfly dances from one flower to another, adding brightness to the peaceful setting. ";
 
-
 const paragraph = document.getElementById("paragraph");
-const keyBoard = document.getElementById('keyboardTrigger').focus();
 const pipe = document.getElementById("pipe");
 const first_letter = text.at(0);
 let word_Counter = 0;
@@ -127,18 +125,6 @@ function startTimer() {
     }, 1000);
   }
 }
-window.onload = function() {
-  var dummyInput = document.createElement("input");
-  dummyInput.setAttribute("type", "text");
-  dummyInput.style.position = "absolute";
-  dummyInput.style.opacity = "0";
-  document.body.appendChild(dummyInput);
-
-  document.body.onclick = function() {
-      dummyInput.focus();
-  };
-};
-
 function keydownHandler(e) {
   const keyPress = e.key;
   if (keyPress === first_letter || word_Counter > 0) {
@@ -151,3 +137,7 @@ function keydownHandler(e) {
   }
 }
 window.addEventListener("keydown", keydownHandler);
+
+document.addEventListener("touchstart", ()=>{
+  alert("hi")
+});
